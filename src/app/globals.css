@@ -9,3 +9,24 @@ html {
 body {
   @apply bg-white text-fairway-900;
 }
+
+@layer utilities {
+  .dot-grid {
+    background-image: radial-gradient(currentColor 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  .fairway-stripes {
+    background-image: repeating-linear-gradient(
+      100deg,
+      rgba(29, 55, 41, 0.06) 0px,
+      rgba(29, 55, 41, 0.06) 26px,
+      transparent 26px,
+      transparent 52px
+    );
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
