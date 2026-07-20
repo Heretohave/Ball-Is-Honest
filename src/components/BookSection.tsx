@@ -1,10 +1,10 @@
 import type { Locale } from "@/i18n/config";
-import type { dictionaries } from "@/i18n/dictionaries";
+import { bookLaunch, type dictionaries } from "@/i18n/dictionaries";
 import GolfBallMark from "@/components/GolfBallMark";
 
 type Dict = (typeof dictionaries)[Locale];
 
-export default function BookSection({ dict }: { locale: Locale; dict: Dict }) {
+export default function BookSection({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
     <section id="book" className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -35,6 +35,10 @@ export default function BookSection({ dict }: { locale: Locale; dict: Dict }) {
             </div>
             <div className="relative h-px bg-white/15" />
           </div>
+
+          <span className="absolute -top-3 -right-3 rounded-full bg-sand-100 border border-sand-200 text-fairway-800 text-xs font-semibold uppercase tracking-wide px-3 py-1.5 shadow-soft">
+            {dict.book.comingSoonPrefix} — {bookLaunch[locale]}
+          </span>
         </div>
 
         <div>
@@ -46,19 +50,9 @@ export default function BookSection({ dict }: { locale: Locale; dict: Dict }) {
           </h2>
           <p className="mt-3 text-fairway-700">{dict.book.subtitle}</p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center rounded-full bg-fairway-700 text-white font-medium px-6 py-3 shadow-soft transition-all hover:bg-fairway-800 hover:shadow-lift hover:-translate-y-0.5"
-            >
-              {dict.book.buyPdf}
-            </button>
-            <a
-              href="#"
-              className="inline-flex items-center justify-center rounded-full border border-fairway-300 text-fairway-800 font-medium px-6 py-3 transition-all hover:bg-fairway-50 hover:-translate-y-0.5"
-            >
-              {dict.book.buyPrint}
-            </a>
+          <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-fairway-200 bg-fairway-50 text-fairway-800 font-medium px-6 py-3">
+            <GolfBallMark className="h-4 w-4 text-fairway-600" />
+            {dict.book.comingSoonPrefix} — {bookLaunch[locale]}
           </div>
 
           <p className="mt-6 text-xs text-fairway-400">{dict.book.note}</p>

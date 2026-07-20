@@ -20,6 +20,9 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Dict })
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-fairway-700">
+          <Link href={`/${locale}/about`} className="relative py-1 transition-colors hover:text-fairway-900 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-fairway-600 after:transition-transform after:duration-300 hover:after:scale-x-100">
+            {dict.nav.about}
+          </Link>
           <Link href={`/${locale}#lessons`} className="relative py-1 transition-colors hover:text-fairway-900 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-fairway-600 after:transition-transform after:duration-300 hover:after:scale-x-100">
             {dict.nav.lessons}
           </Link>
