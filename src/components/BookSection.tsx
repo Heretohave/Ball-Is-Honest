@@ -6,7 +6,7 @@ type Dict = (typeof dictionaries)[Locale];
 
 export default function BookSection({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
-    <section id="book" className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+    <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="relative max-w-sm mx-auto w-full">
           <div

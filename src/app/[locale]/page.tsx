@@ -2,10 +2,7 @@ import { isLocale, defaultLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import Hero from "@/components/Hero";
 import AboutTeaser from "@/components/AboutTeaser";
-import VideoLessons from "@/components/VideoLessons";
-import PremiumTeaser from "@/components/PremiumTeaser";
-import BookSection from "@/components/BookSection";
-import PrivateLessons from "@/components/PrivateLessons";
+import LandingTeasers from "@/components/LandingTeasers";
 
 export default function HomePage({ params }: { params: { locale: string } }) {
   const locale = isLocale(params.locale) ? params.locale : defaultLocale;
@@ -15,10 +12,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
     <>
       <Hero locale={locale} dict={dict} />
       <AboutTeaser locale={locale} dict={dict} />
-      <VideoLessons locale={locale} dict={dict} />
-      <PremiumTeaser locale={locale} dict={dict} />
-      <BookSection locale={locale} dict={dict} />
-      <PrivateLessons locale={locale} dict={dict} />
+      <LandingTeasers locale={locale} dict={dict} />
     </>
   );
 }

@@ -1,10 +1,11 @@
+import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { dictionaries } from "@/i18n/dictionaries";
 import GolfBallMark from "@/components/GolfBallMark";
 
 type Dict = (typeof dictionaries)[Locale];
 
-export default function Hero({ dict }: { locale: Locale; dict: Dict }) {
+export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-fairway-50 via-fairway-50/60 to-white">
       <div
@@ -41,18 +42,18 @@ export default function Hero({ dict }: { locale: Locale; dict: Dict }) {
           {dict.hero.subtitle}
         </p>
         <div className="animate-fade-up [animation-delay:240ms] mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#lessons"
+          <Link
+            href={`/${locale}/lessons`}
             className="inline-flex items-center rounded-full bg-fairway-700 text-white font-medium px-6 py-3 shadow-soft transition-all hover:bg-fairway-800 hover:shadow-lift hover:-translate-y-0.5"
           >
             {dict.hero.ctaPrimary}
-          </a>
-          <a
-            href="#premium"
+          </Link>
+          <Link
+            href={`/${locale}/premium`}
             className="inline-flex items-center rounded-full border border-fairway-300 bg-white/60 text-fairway-800 font-medium px-6 py-3 transition-all hover:bg-white hover:border-fairway-400 hover:-translate-y-0.5"
           >
             {dict.hero.ctaSecondary}
-          </a>
+          </Link>
         </div>
       </div>
 

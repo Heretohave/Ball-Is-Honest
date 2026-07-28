@@ -6,6 +6,29 @@ export const bookLaunch: Record<Locale, string> = {
   sk: "jeseň 2026",
 };
 
+// Price shown per premium series — update if pricing changes.
+export const premiumPrice: Record<Locale, string> = {
+  en: "€20",
+  sk: "20 €",
+};
+
+// Premium series catalogue. Order here drives display order everywhere.
+export const premiumSeriesSlugs = [
+  "basics",
+  "grip",
+  "setup",
+  "putting",
+  "chipping",
+  "pitching",
+  "technique-fundamentals",
+  "swing-theories",
+  "philosophy",
+  "game-management",
+  "expectations-management",
+] as const;
+
+export type PremiumSeriesSlug = (typeof premiumSeriesSlugs)[number];
+
 export const dictionaries = {
   en: {
     meta: {
@@ -55,18 +78,65 @@ export const dictionaries = {
       ],
       cta: "Book a lesson",
     },
+    landingTeasers: {
+      lessons: {
+        eyebrow: "Free",
+        heading: "Free Video Lessons",
+        blurb: "Start with free lessons on the fundamentals, added regularly on YouTube.",
+        cta: "Watch the lessons",
+      },
+      premium: {
+        eyebrow: "Premium",
+        heading: "Premium Lessons",
+        blurb: "In-depth video series on technique, strategy, and mindset — from €20 per series.",
+        cta: "Explore premium",
+      },
+      book: {
+        eyebrow: "The Book",
+        heading: "The Book",
+        blurb: "One complete guide to an honest, repeatable swing.",
+        cta: "See the book",
+      },
+      privateLessons: {
+        eyebrow: "1:1 Coaching",
+        heading: "Private Lessons",
+        blurb: "One-on-one coaching, in person on the course or via video review.",
+        cta: "Book a lesson",
+      },
+    },
     videos: {
       title: "Free Video Lessons",
       subtitle: "Start here. New lessons added regularly on YouTube.",
       placeholderNote:
         "Replace these placeholder video IDs with your real YouTube lesson links.",
+      completedBadge: "Completed",
+      continueBadge: "Continue",
     },
     premium: {
       title: "Premium Lessons",
       subtitle:
         "Sign in with Google to unlock in-depth technique breakdowns, course-management lessons, and full training programs.",
       cta: "Sign in with Google",
-      note: "Premium access setup (Google login + subscription gating) comes next — this section is a placeholder for now.",
+      note: "Payments aren't live yet — sign in to save your spot. Each series below unlocks individually for €20 once it ships.",
+      seriesEyebrow: "The library",
+      seriesHeading: "Choose your series",
+      seriesSubtitle: "Eleven focused series, priced individually. Sign in now — checkout opens when the first series ships.",
+      perSeries: "per series",
+      comingSoon: "Coming soon",
+      locked: "Locked",
+      series: {
+        basics: "Basics",
+        grip: "Grip",
+        setup: "Setup",
+        putting: "Putting",
+        chipping: "Chipping",
+        pitching: "Pitching",
+        "technique-fundamentals": "Technique Fundamentals",
+        "swing-theories": "Swing Theories",
+        philosophy: "Philosophy",
+        "game-management": "Game Management",
+        "expectations-management": "Expectations Management",
+      } satisfies Record<PremiumSeriesSlug, string>,
     },
     book: {
       title: "The Book",
@@ -137,18 +207,69 @@ export const dictionaries = {
       ],
       cta: "Rezervovať lekciu",
     },
+    // NOTE: machine-assisted draft translation — please have a native speaker
+    // review this before it goes live.
+    landingTeasers: {
+      lessons: {
+        eyebrow: "Zadarmo",
+        heading: "Bezplatné videolekcie",
+        blurb: "Začnite s bezplatnými lekciami základov, pravidelne pridávanými na YouTube.",
+        cta: "Pozrieť lekcie",
+      },
+      premium: {
+        eyebrow: "Prémium",
+        heading: "Prémiové lekcie",
+        blurb: "Podrobné videosérie o technike, stratégii a mentálnej stránke hry — od 20 € za sériu.",
+        cta: "Preskúmať prémium",
+      },
+      book: {
+        eyebrow: "Kniha",
+        heading: "Kniha",
+        blurb: "Jeden kompletný sprievodca úprimným a opakovateľným švihom.",
+        cta: "Pozrieť knihu",
+      },
+      privateLessons: {
+        eyebrow: "Individuálny koučing",
+        heading: "Súkromné lekcie",
+        blurb: "Individuálny koučing osobne na ihrisku alebo formou video rozboru.",
+        cta: "Rezervovať lekciu",
+      },
+    },
     videos: {
       title: "Bezplatné videolekcie",
       subtitle: "Začnite tu. Nové lekcie pravidelne pridávame na YouTube.",
       placeholderNote:
         "Nahraďte tieto ukážkové video ID vašimi skutočnými odkazmi na lekcie z YouTube.",
+      completedBadge: "Dokončené",
+      continueBadge: "Pokračovať",
     },
+    // NOTE: machine-assisted draft translation — please have a native speaker
+    // review this before it goes live.
     premium: {
       title: "Prémiové lekcie",
       subtitle:
         "Prihláste sa cez Google a odomknite podrobné rozbory techniky, lekcie manažmentu ihriska a kompletné tréningové programy.",
       cta: "Prihlásiť sa cez Google",
-      note: "Nastavenie prémiového prístupu (Google prihlásenie + predplatné) príde neskôr — táto sekcia je zatiaľ len ukážka.",
+      note: "Platby zatiaľ nie sú spustené — prihlásením si zarezervujete miesto. Každá séria nižšie sa odomkne jednotlivo za 20 € hneď po spustení.",
+      seriesEyebrow: "Knižnica",
+      seriesHeading: "Vyberte si sériu",
+      seriesSubtitle: "Jedenásť zameraných sérií, každá cenená samostatne. Prihláste sa teraz — nákup sa spustí, keď vyjde prvá séria.",
+      perSeries: "za sériu",
+      comingSoon: "Čoskoro",
+      locked: "Uzamknuté",
+      series: {
+        basics: "Základy",
+        grip: "Úchop",
+        setup: "Postavenie",
+        putting: "Puttovanie",
+        chipping: "Chipovanie",
+        pitching: "Pitchovanie",
+        "technique-fundamentals": "Základy techniky",
+        "swing-theories": "Teórie švihu",
+        philosophy: "Filozofia",
+        "game-management": "Manažment hry",
+        "expectations-management": "Manažment očakávaní",
+      } satisfies Record<PremiumSeriesSlug, string>,
     },
     book: {
       title: "Kniha",

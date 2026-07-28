@@ -2,13 +2,16 @@
 
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
+import type { Locale } from "@/i18n/config";
 
 export default function GoogleAuthButton({
+  locale,
   signInLabel,
   signOutLabel,
   buttonClassName,
   theme = "light",
 }: {
+  locale: Locale;
   signInLabel: string;
   signOutLabel: string;
   buttonClassName: string;
@@ -50,7 +53,11 @@ export default function GoogleAuthButton({
   }
 
   return (
-    <button type="button" onClick={() => signIn("google")} className={buttonClassName}>
+    <button
+      type="button"
+      onClick={() => signIn("google", { callbackUrl: `/${locale}/lessons` })}
+      className={buttonClassName}
+    >
       {signInLabel}
     </button>
   );

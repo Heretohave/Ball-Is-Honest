@@ -46,7 +46,7 @@ export default function About({ locale, dict }: { locale: Locale; dict: Dict }) 
             </ul>
 
             <a
-              href={`/${locale}#private-lessons`}
+              href={`/${locale}/private-lessons`}
               className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-fairway-700 text-white font-medium px-6 py-3 shadow-soft transition-all hover:bg-fairway-800 hover:shadow-lift hover:-translate-y-0.5"
             >
               {dict.about.cta}

@@ -6,7 +6,7 @@ type Dict = (typeof dictionaries)[Locale];
 
 export default function PrivateLessons({ dict }: { locale: Locale; dict: Dict }) {
   return (
-    <section id="private-lessons" className="relative overflow-hidden bg-sand-50 border-t border-sand-200">
+    <section className="relative overflow-hidden bg-sand-50 border-t border-sand-200">
       <div aria-hidden="true" className="fairway-stripes absolute inset-0" />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center">
