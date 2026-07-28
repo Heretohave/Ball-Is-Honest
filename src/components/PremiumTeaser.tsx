@@ -1,6 +1,7 @@
 import type { Locale } from "@/i18n/config";
 import type { dictionaries } from "@/i18n/dictionaries";
 import GolfBallMark from "@/components/GolfBallMark";
+import GoogleAuthButton from "@/components/GoogleAuthButton";
 
 type Dict = (typeof dictionaries)[Locale];
 
@@ -19,12 +20,14 @@ export default function PremiumTeaser({ dict }: { locale: Locale; dict: Dict }) 
         </span>
         <h2 className="font-display text-3xl sm:text-4xl font-semibold">{dict.premium.title}</h2>
         <p className="mt-3 text-fairway-100/90 max-w-2xl mx-auto text-balance">{dict.premium.subtitle}</p>
-        <button
-          type="button"
-          className="mt-8 inline-flex items-center rounded-full bg-white text-fairway-900 font-medium px-6 py-3 shadow-lift transition-all hover:bg-sand-50 hover:-translate-y-0.5"
-        >
-          {dict.premium.cta}
-        </button>
+        <div className="mt-8 flex justify-center">
+          <GoogleAuthButton
+            signInLabel={dict.premium.cta}
+            signOutLabel={dict.nav.signOut}
+            theme="dark"
+            buttonClassName="inline-flex items-center rounded-full bg-white text-fairway-900 font-medium px-6 py-3 shadow-lift transition-all hover:bg-sand-50 hover:-translate-y-0.5"
+          />
+        </div>
         <p className="mt-6 text-xs text-fairway-300/80 max-w-md mx-auto">{dict.premium.note}</p>
       </div>
     </section>

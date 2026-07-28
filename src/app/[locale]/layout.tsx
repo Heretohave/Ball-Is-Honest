@@ -6,6 +6,7 @@ import { isLocale, locales, defaultLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AuthProvider from "@/components/AuthProvider";
 
 const fontSans = Inter({
   subsets: ["latin", "latin-ext"],
@@ -50,9 +51,11 @@ export default function LocaleLayout({
   return (
     <html lang={locale} className={`${fontSans.variable} ${fontDisplay.variable}`}>
       <body className="min-h-screen flex flex-col font-sans antialiased">
-        <Header locale={locale} dict={dict} />
-        <main className="flex-1">{children}</main>
-        <Footer locale={locale} dict={dict} />
+        <AuthProvider>
+          <Header locale={locale} dict={dict} />
+          <main className="flex-1">{children}</main>
+          <Footer locale={locale} dict={dict} />
+        </AuthProvider>
       </body>
     </html>
   );

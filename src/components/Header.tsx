@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { dictionaries } from "@/i18n/dictionaries";
 import GolfBallMark from "@/components/GolfBallMark";
+import GoogleAuthButton from "@/components/GoogleAuthButton";
 
 type Dict = (typeof dictionaries)[Locale];
 
@@ -44,12 +45,14 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Dict })
           >
             {otherLocale.toUpperCase()}
           </Link>
-          <button
-            type="button"
-            className="hidden sm:inline-flex items-center rounded-full bg-fairway-700 text-white text-sm font-medium px-4 py-2 shadow-soft transition-all hover:bg-fairway-800 hover:shadow-lift hover:-translate-y-0.5"
-          >
-            {dict.nav.signIn}
-          </button>
+          <div className="hidden sm:block">
+            <GoogleAuthButton
+              signInLabel={dict.nav.signIn}
+              signOutLabel={dict.nav.signOut}
+              theme="light"
+              buttonClassName="inline-flex items-center rounded-full bg-fairway-700 text-white text-sm font-medium px-4 py-2 shadow-soft transition-all hover:bg-fairway-800 hover:shadow-lift hover:-translate-y-0.5"
+            />
+          </div>
         </div>
       </div>
     </header>

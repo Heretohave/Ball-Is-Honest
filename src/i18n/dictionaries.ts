@@ -20,6 +20,7 @@ export const dictionaries = {
       book: "Book",
       private: "Private Lessons",
       signIn: "Sign in with Google",
+      signOut: "Sign out",
     },
     hero: {
       eyebrow: "Golf coaching that tells you the truth",
@@ -97,6 +98,7 @@ export const dictionaries = {
       book: "Kniha",
       private: "Súkromné lekcie",
       signIn: "Prihlásiť sa cez Google",
+      signOut: "Odhlásiť sa",
     },
     hero: {
       eyebrow: "Golfový koučing, ktorý hovorí pravdu",
