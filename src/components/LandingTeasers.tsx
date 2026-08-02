@@ -9,20 +9,13 @@ export default function LandingTeasers({ locale, dict }: { locale: Locale; dict:
 
   return (
     <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-20 sm:pb-24">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <SectionTeaser
           href={`/${locale}/lessons`}
           eyebrow={t.lessons.eyebrow}
           heading={t.lessons.heading}
           blurb={t.lessons.blurb}
           cta={t.lessons.cta}
-        />
-        <SectionTeaser
-          href={`/${locale}/premium`}
-          eyebrow={t.premium.eyebrow}
-          heading={t.premium.heading}
-          blurb={t.premium.blurb}
-          cta={t.premium.cta}
         />
         <SectionTeaser
           href={`/${locale}/book`}

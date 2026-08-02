@@ -39,7 +39,6 @@ export const dictionaries = {
     nav: {
       about: "About",
       lessons: "Lessons",
-      premium: "Premium",
       book: "Book",
       private: "Private Lessons",
       signIn: "Sign in with Google",
@@ -80,16 +79,10 @@ export const dictionaries = {
     },
     landingTeasers: {
       lessons: {
-        eyebrow: "Free",
-        heading: "Free Video Lessons",
-        blurb: "Start with free lessons on the fundamentals, added regularly on YouTube.",
-        cta: "Watch the lessons",
-      },
-      premium: {
-        eyebrow: "Premium",
-        heading: "Premium Lessons",
-        blurb: "In-depth video series on technique, strategy, and mindset — from €20 per series.",
-        cta: "Explore premium",
+        eyebrow: "Lessons",
+        heading: "Lessons",
+        blurb: "Free videos to start, plus premium series on technique, strategy, and mindset from €20 — all in one place.",
+        cta: "Explore lessons",
       },
       book: {
         eyebrow: "The Book",
@@ -164,7 +157,6 @@ export const dictionaries = {
     nav: {
       about: "O mne",
       lessons: "Lekcie",
-      premium: "Prémium",
       book: "Kniha",
       private: "Súkromné lekcie",
       signIn: "Prihlásiť sa cez Google",
@@ -211,16 +203,10 @@ export const dictionaries = {
     // review this before it goes live.
     landingTeasers: {
       lessons: {
-        eyebrow: "Zadarmo",
-        heading: "Bezplatné videolekcie",
-        blurb: "Začnite s bezplatnými lekciami základov, pravidelne pridávanými na YouTube.",
-        cta: "Pozrieť lekcie",
-      },
-      premium: {
-        eyebrow: "Prémium",
-        heading: "Prémiové lekcie",
-        blurb: "Podrobné videosérie o technike, stratégii a mentálnej stránke hry — od 20 € za sériu.",
-        cta: "Preskúmať prémium",
+        eyebrow: "Lekcie",
+        heading: "Lekcie",
+        blurb: "Bezplatné videá na začiatok, plus prémiové série o technike, stratégii a mentálnej stránke hry od 20 € — všetko na jednom mieste.",
+        cta: "Preskúmať lekcie",
       },
       book: {
         eyebrow: "Kniha",

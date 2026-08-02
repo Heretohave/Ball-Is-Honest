@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { isLocale, defaultLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import VideoLessons from "@/components/VideoLessons";
+import Premium from "@/components/Premium";
 
 export async function generateMetadata({
   params,
@@ -11,7 +12,7 @@ export async function generateMetadata({
   const locale = isLocale(params.locale) ? params.locale : defaultLocale;
   const dict = getDictionary(locale);
   return {
-    title: `${dict.videos.title} — ${dict.meta.title}`,
+    title: `${dict.nav.lessons} — ${dict.meta.title}`,
     description: dict.videos.subtitle,
   };
 }
@@ -20,5 +21,10 @@ export default function LessonsPage({ params }: { params: { locale: string } }) 
   const locale = isLocale(params.locale) ? params.locale : defaultLocale;
   const dict = getDictionary(locale);
 
-  return <VideoLessons locale={locale} dict={dict} />;
+  return (
+    <>
+      <VideoLessons locale={locale} dict={dict} />
+      <Premium locale={locale} dict={dict} />
+    </>
+  );
 }

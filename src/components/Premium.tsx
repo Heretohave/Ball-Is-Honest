@@ -8,7 +8,7 @@ type Dict = (typeof dictionaries)[Locale];
 export default function Premium({ locale, dict }: { locale: Locale; dict: Dict }) {
   return (
     <>
-      <section className="relative overflow-hidden bg-fairway-900 text-white">
+      <section id="premium" className="relative overflow-hidden bg-fairway-900 text-white scroll-mt-16">
         <div aria-hidden="true" className="dot-grid absolute inset-0 text-white/[0.04]" />
         <div
           aria-hidden="true"
@@ -19,13 +19,14 @@ export default function Premium({ locale, dict }: { locale: Locale; dict: Dict }
           <span className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-white/10 ring-1 ring-white/20 mb-6">
             <GolfBallMark className="h-6 w-6 text-white" />
           </span>
-          <h1 className="font-display text-3xl sm:text-4xl font-semibold">{dict.premium.title}</h1>
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold">{dict.premium.title}</h2>
           <p className="mt-3 text-fairway-100/90 max-w-2xl mx-auto text-balance">{dict.premium.subtitle}</p>
           <div className="mt-8 flex justify-center">
             <GoogleAuthButton
               locale={locale}
               signInLabel={dict.premium.cta}
               signOutLabel={dict.nav.signOut}
+              lessonsLabel={dict.nav.lessons}
               theme="dark"
               buttonClassName="inline-flex items-center rounded-full bg-white text-fairway-900 font-medium px-6 py-3 shadow-lift transition-all hover:bg-sand-50 hover:-translate-y-0.5"
             />

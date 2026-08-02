@@ -49,7 +49,7 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
             {dict.hero.ctaPrimary}
           </Link>
           <Link
-            href={`/${locale}/premium`}
+            href={`/${locale}/lessons#premium`}
             className="inline-flex items-center rounded-full border border-fairway-300 bg-white/60 text-fairway-800 font-medium px-6 py-3 transition-all hover:bg-white hover:border-fairway-400 hover:-translate-y-0.5"
           >
             {dict.hero.ctaSecondary}

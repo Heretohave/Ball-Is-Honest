@@ -27,9 +27,6 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Dict })
           <Link href={`/${locale}/lessons`} className="relative py-1 transition-colors hover:text-fairway-900 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-fairway-600 after:transition-transform after:duration-300 hover:after:scale-x-100">
             {dict.nav.lessons}
           </Link>
-          <Link href={`/${locale}/premium`} className="relative py-1 transition-colors hover:text-fairway-900 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-fairway-600 after:transition-transform after:duration-300 hover:after:scale-x-100">
-            {dict.nav.premium}
-          </Link>
           <Link href={`/${locale}/book`} className="relative py-1 transition-colors hover:text-fairway-900 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-fairway-600 after:transition-transform after:duration-300 hover:after:scale-x-100">
             {dict.nav.book}
           </Link>
@@ -50,6 +47,7 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Dict })
               locale={locale}
               signInLabel={dict.nav.signIn}
               signOutLabel={dict.nav.signOut}
+              lessonsLabel={dict.nav.lessons}
               theme="light"
               buttonClassName="inline-flex items-center rounded-full bg-fairway-700 text-white text-sm font-medium px-4 py-2 shadow-soft transition-all hover:bg-fairway-800 hover:shadow-lift hover:-translate-y-0.5"
             />
