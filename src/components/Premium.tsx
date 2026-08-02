@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import { premiumPrice, premiumSeriesSlugs, type dictionaries } from "@/i18n/dictionaries";
-import GolfBallMark from "@/components/GolfBallMark";
+import Logomark from "@/components/Logomark";
 import GoogleAuthButton from "@/components/GoogleAuthButton";
 
 type Dict = (typeof dictionaries)[Locale];
@@ -17,7 +17,7 @@ export default function Premium({ locale, dict }: { locale: Locale; dict: Dict }
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center">
           <span className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-white/10 ring-1 ring-white/20 mb-6">
-            <GolfBallMark className="h-6 w-6 text-white" />
+            <Logomark className="h-6 w-6 text-white" />
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-semibold">{dict.premium.title}</h2>
           <p className="mt-3 text-fairway-100/90 max-w-2xl mx-auto text-balance">{dict.premium.subtitle}</p>

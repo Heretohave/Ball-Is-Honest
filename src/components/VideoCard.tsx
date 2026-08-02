@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import GolfBallMark from "@/components/GolfBallMark";
+import Logomark from "@/components/Logomark";
 import { getWatchStatus, setWatchStatus, type WatchStatus } from "@/lib/watchProgress";
 
 declare global {
@@ -116,7 +116,7 @@ export default function VideoCard({
           />
         ) : (
           <div className="dot-grid relative flex h-full w-full items-center justify-center bg-fairway-50 text-fairway-800/[0.08]">
-            <GolfBallMark className="h-10 w-10 text-fairway-300" />
+            <Logomark className="h-10 w-10 text-fairway-300" />
             <span className="absolute bottom-3 right-3 text-[10px] font-semibold uppercase tracking-wide text-fairway-400">
               {comingSoonLabel}
             </span>

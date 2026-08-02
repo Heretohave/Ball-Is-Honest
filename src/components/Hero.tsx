@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { dictionaries } from "@/i18n/dictionaries";
-import GolfBallMark from "@/components/GolfBallMark";
+import Logomark from "@/components/Logomark";
 
 type Dict = (typeof dictionaries)[Locale];
 
@@ -21,18 +21,18 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dict }) {
         className="absolute -bottom-32 -left-24 h-72 w-72 rounded-full bg-sand-200/40 blur-3xl"
       />
 
-      <GolfBallMark
+      <Logomark
         aria-hidden="true"
         className="hidden lg:block absolute top-28 left-[8%] h-16 w-16 text-fairway-200/70 drop-shadow-sm animate-fade-up"
       />
-      <GolfBallMark
+      <Logomark
         aria-hidden="true"
         className="hidden lg:block absolute bottom-20 right-[10%] h-10 w-10 text-sand-200/80 drop-shadow-sm animate-fade-up"
       />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
         <p className="animate-fade-up inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-fairway-600 mb-5 rounded-full border border-fairway-200 bg-white/70 px-4 py-1.5 shadow-soft">
-          <GolfBallMark className="h-3.5 w-3.5 text-fairway-600" />
+          <Logomark className="h-3.5 w-3.5 text-fairway-600" />
           {dict.hero.eyebrow}
         </p>
         <h1 className="animate-fade-up [animation-delay:80ms] text-balance font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-fairway-900 leading-[1.1] max-w-3xl mx-auto">

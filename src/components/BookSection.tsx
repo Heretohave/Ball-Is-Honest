@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import { bookLaunch, type dictionaries } from "@/i18n/dictionaries";
-import GolfBallMark from "@/components/GolfBallMark";
+import Logomark from "@/components/Logomark";
 
 type Dict = (typeof dictionaries)[Locale];
 
@@ -20,7 +20,7 @@ export default function BookSection({ locale, dict }: { locale: Locale; dict: Di
               className="absolute inset-y-0 left-0 w-3 bg-black/20"
             />
             <div className="relative flex justify-between items-start">
-              <GolfBallMark className="h-8 w-8 text-white/90" />
+              <Logomark className="h-8 w-8 text-white/90" />
               <span className="text-[10px] font-semibold uppercase tracking-widest text-fairway-200">
                 Vol. 1
               </span>
@@ -51,7 +51,7 @@ export default function BookSection({ locale, dict }: { locale: Locale; dict: Di
           <p className="mt-3 text-fairway-700">{dict.book.subtitle}</p>
 
           <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-fairway-200 bg-fairway-50 text-fairway-800 font-medium px-6 py-3">
-            <GolfBallMark className="h-4 w-4 text-fairway-600" />
+            <Logomark className="h-4 w-4 text-fairway-600" />
             {dict.book.comingSoonPrefix} — {bookLaunch[locale]}
           </div>
 

@@ -94,7 +94,7 @@ export const dictionaries = {
         eyebrow: "1:1 Coaching",
         heading: "Private Lessons",
         blurb: "One-on-one coaching, in person on the course or via video review.",
-        cta: "Book a lesson",
+        cta: "See private lessons",
       },
     },
     videos: {
@@ -218,7 +218,7 @@ export const dictionaries = {
         eyebrow: "Individuálny koučing",
         heading: "Súkromné lekcie",
         blurb: "Individuálny koučing osobne na ihrisku alebo formou video rozboru.",
-        cta: "Rezervovať lekciu",
+        cta: "Pozrieť súkromné lekcie",
       },
     },
     videos: {

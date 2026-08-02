@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { dictionaries } from "@/i18n/dictionaries";
-import GolfBallMark from "@/components/GolfBallMark";
+import Logomark from "@/components/Logomark";
 import GoogleAuthButton from "@/components/GoogleAuthButton";
 
 type Dict = (typeof dictionaries)[Locale];
@@ -16,7 +16,7 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Dict })
           href={`/${locale}`}
           className="group flex items-center gap-2.5 font-display font-semibold text-lg text-fairway-900"
         >
-          <GolfBallMark className="h-7 w-7 text-fairway-700 transition-transform duration-300 group-hover:rotate-45" />
+          <Logomark className="h-7 w-7 text-fairway-700 transition-transform duration-300 group-hover:rotate-45" />
           <span>Ball Is Honest</span>
         </Link>
 

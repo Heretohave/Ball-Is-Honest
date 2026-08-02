@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { dictionaries } from "@/i18n/dictionaries";
+import { bookingWhatsAppHref } from "@/lib/whatsapp";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 type Dict = (typeof dictionaries)[Locale];
 
@@ -46,9 +48,12 @@ export default function About({ locale, dict }: { locale: Locale; dict: Dict }) 
             </ul>
 
             <a
-              href={`/${locale}/private-lessons`}
-              className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-fairway-700 text-white font-medium px-6 py-3 shadow-soft transition-all hover:bg-fairway-800 hover:shadow-lift hover:-translate-y-0.5"
+              href={bookingWhatsAppHref(locale)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-fairway-700 text-white font-medium px-6 py-3 shadow-soft transition-all hover:bg-fairway-800 hover:shadow-lift hover:-translate-y-0.5"
             >
+              <WhatsAppIcon className="h-5 w-5" />
               {dict.about.cta}
             </a>
           </div>

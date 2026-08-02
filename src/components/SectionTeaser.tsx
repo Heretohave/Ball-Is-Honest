@@ -1,5 +1,5 @@
 import Link from "next/link";
-import GolfBallMark from "@/components/GolfBallMark";
+import Logomark from "@/components/Logomark";
 
 export default function SectionTeaser({
   href,
@@ -20,7 +20,7 @@ export default function SectionTeaser({
       className="group flex flex-col rounded-2xl border border-fairway-100 bg-white shadow-soft p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift hover:border-fairway-200"
     >
       <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-fairway-50 ring-1 ring-fairway-100">
-        <GolfBallMark className="h-5 w-5 text-fairway-600" />
+        <Logomark className="h-5 w-5 text-fairway-600" />
       </span>
       <span className="mt-4 text-xs font-semibold uppercase tracking-wider text-fairway-500">
         {eyebrow}

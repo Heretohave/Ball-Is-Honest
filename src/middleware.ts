@@ -29,5 +29,11 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|favicon.ico|.*\\..*).*)"],
+  // Skip internals, the API, and Next.js metadata routes. The trailing
+  // `.*\..*` covers anything with a file extension; the named entries cover
+  // extensionless metadata routes (e.g. /apple-icon) that would otherwise be
+  // redirected into a locale and 404.
+  matcher: [
+    "/((?!_next|api|favicon.ico|icon|apple-icon|opengraph-image|twitter-image|.*\\..*).*)",
+  ],
 };
